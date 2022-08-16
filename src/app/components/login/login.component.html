@@ -1,0 +1,18 @@
+<div class="container loginform col-md-6">
+    <h2 class="login-text">LOGIN</h2>
+    <form>
+        <div class="mb-3">
+          <input name=email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" [(ngModel)]="email">
+        </div>
+        <div class="mb-3">
+          <input name=password type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="password">
+        </div>
+         <br>
+         <div class="container error-message">
+            <p class="error-text">{{errorMessage}}</p>
+        </div>
+        <button type="submit" class="btn btn-danger" (click)="login()">Login</button>
+        
+        
+      </form>
+</div>

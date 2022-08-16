@@ -1,0 +1,32 @@
+
+<h3>{{searchParam}}</h3>
+
+
+<!-- <li *ngFor="let movie of allMovies.d">
+     {{movie.l}}
+  </li> -->
+
+  <div class="horizontal">
+
+  <div *ngFor="let movie of allMovies.d" class="container all-movies " >
+    
+    
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{movie.i.imageUrl}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Title: {{movie.l}}</h5>
+               
+              <p>Year: {{movie.y}}</p>
+              <p>Rank: {{movie.rank}}</p>
+              <p>Stars: {{movie.s}}</p>
+              
+            </div>
+          </div>
+    </div>
+
+    
+
+
+
+  </div>
