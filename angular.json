@@ -110,5 +110,8 @@
       }
     }
   },
-  "defaultProject": "movie-rating"
+  "defaultProject": "movie-rating",
+  "cli": {
+    "analytics": false
+  }
 }
