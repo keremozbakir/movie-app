@@ -1,16 +1,19 @@
-// .horizontal {
-//     display: flex;
-//     justify-content: space-between;
+.horizontal {
+    height: 100%;
+    width: 100%;
     
-// }
+}
+ .body{
+    width: 100vw;
+ }
 
 .horizontal{
 
-   
+    
     display: grid;
     grid-auto-flow: column;
     
-    overflow-x:auto;
+    overflow-x:none;
 
 } 
 

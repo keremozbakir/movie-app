@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { TransporterService } from 'src/app/services/transporter.service';
 import moviesJson from '../movie/movies.json'
-
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-movie',
@@ -18,7 +18,7 @@ export class MovieComponent implements OnInit {
     //this.getMovies();
     this.transporterService.searchWord.subscribe((msg: any) => {
       this.searchParam = msg
-      //this.getMovies()
+      this.getMovies()
     })
 
   }
@@ -34,4 +34,30 @@ export class MovieComponent implements OnInit {
       this.allMovies =movies
     })
   }
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
+
 }
