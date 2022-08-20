@@ -9,6 +9,7 @@ import { MovieComponent } from './components/movie/movie.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http"
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CarouselModule
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
