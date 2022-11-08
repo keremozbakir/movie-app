@@ -1,38 +1,11 @@
-.horizontal {
-    height: 100%;
-    width: 100%;
-    
-}
- .body{
-    width: 100vw;
- }
-
-.horizontal{
-
-    
-    display: grid;
-    grid-auto-flow: column;
-    
-    overflow-x:none;
-
-} 
-
-
-.all-movies{
-    transition: all .2s ease-in-out;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns:260px;
-    
-} 
-
-
-.all-movies:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
- 
 .card{
-    width: 200px;
-    height: 600px;
-    //test card
+     height: 350px;
+     margin-right: 12px;
+}
+
+.card-body{
+    height: 20px !important
+}
+.card-img-top{
+    height: 350px;
 }

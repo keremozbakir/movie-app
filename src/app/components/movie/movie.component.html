@@ -20,31 +20,30 @@
 
   
   <owl-carousel-o [options]="customOptions"   >
-    <ng-template carouselSlide *ngFor="let movie of allMovies.d">  
+    <ng-template carouselSlide *ngFor="let movie of allMovies.d" style="width: 200px;">  
       <div class="card" >
-        <img class="card-img-top" src="{{movie.i.imageUrl}}" alt="Card image cap">
-        <div class="card-body">
+        <img class="card-img-top image-size" src="{{movie.i.imageUrl}}" alt="Card image cap" >
+        <!-- <div class="card-body">
           <h5 class="card-title">Title: {{movie.l}}</h5>
           <p>Year: {{movie.y}}</p>
           <p>Rank: {{movie.rank}}</p>
           <p>Stars: {{movie.s}}</p>    
-        </div>
+        </div> -->
       </div>
     </ng-template> 
   </owl-carousel-o>
   <div>Some tags after</div>
 
   <owl-carousel-o [options]="customOptions"   >
-    <ng-template carouselSlide *ngFor="let movie of allMovies.d">  
+    <ng-template carouselSlide *ngFor="let movie of allMovies.d" style="width: 200px;">  
       <div class="card" >
-        <img class="card-img-top" src="{{movie.i.imageUrl}}" alt="Card image cap">
-        <div class="card-body">
+        <img class="card-img-top image-size" src="{{movie.i.imageUrl}}" alt="Card image cap" >
+        <!-- <div class="card-body">
           <h5 class="card-title">Title: {{movie.l}}</h5>
           <p>Year: {{movie.y}}</p>
           <p>Rank: {{movie.rank}}</p>
           <p>Stars: {{movie.s}}</p>    
-        </div>
+        </div> -->
       </div>
     </ng-template> 
   </owl-carousel-o>
- 
