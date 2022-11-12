@@ -1,3 +1,7 @@
+.body{
+    background-color: #212529;
+}
+
 .card{
      height: 350px;
      margin-right: 12px;
@@ -8,4 +12,19 @@
 }
 .card-img-top{
     height: 350px;
+}
+body {background-color: #212529;}
+
+.movies-section{
+    background-color: #212529;
+    padding: 0 40px 0 40px;
+}
+
+.section-titles{
+    color: white;
+    
+    padding:  20px ;
+    font-family: 'Noto Sans', sans-serif;
+
+
 }

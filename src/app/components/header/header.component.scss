@@ -1,3 +1,33 @@
 navbar-div{
     width: 100%;
+    
+}
+body{
+    background-color: black;
+}
+
+.navbar-text{
+    color: white;
+    font-size: large;
+    padding-right: 30px !important;
+    font-family: 'Noto Sans', sans-serif;
+    
+    
+
+}
+.navbar{
+    padding: 5px 40px 20px 40px;
+}
+
+.navbar-logo{
+    color:red;
+    font-size: xx-large;
+    padding-top:0 ;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+.search-image{
+    color:white;
+    margin: 0 20px 0 0;
 }
