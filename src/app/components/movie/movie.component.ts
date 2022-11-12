@@ -24,6 +24,7 @@ export class MovieComponent implements OnInit {
   }
   allMovies: any = moviesJson
   searchParam: any = 'stardust'
+  sliderWidth="300px"
   allUrls = []
   getMovies() {
     var params={q:this.searchParam}
@@ -40,9 +41,11 @@ export class MovieComponent implements OnInit {
     customOptions: OwlOptions = {
       loop: true,
       mouseDrag: true,
+      margin: 0,
+      autoWidth:true,
       touchDrag: true,
       pullDrag: true,
-      dots: true,
+      dots: false,
       navSpeed: 700,
       navText: ['', ''],
       responsive: {
@@ -57,9 +60,18 @@ export class MovieComponent implements OnInit {
         },
         940: {
           items: 4
-        }
+        } ,
+        1140: {
+          items: 5
+        },
+        1340: {
+          items:6
+        },
+        1540: {
+          items: 7
+        }   
       },
-      nav: true
+      nav: false
     }
   
  

@@ -1,0 +1,46 @@
+.body{
+    background-color: aqua;
+}
+
+.card{
+    position: relative;
+    height: 400px;
+    width: 250px;
+    overflow: hidden;
+    margin-left: 10px;
+    
+}
+.card-body{
+    position: absolute;
+    top: 250px;
+    color: red;
+    max-height: 110px;
+    max-width: 230px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.card:hover > .card-body{
+    opacity: 1;
+}
+
+.card:hover{
+    padding:unset;
+    margin:unset;
+    transition: 1.2s;
+    height: 500px;
+}
+
+.card-image{
+    height: 400px;
+    width: 250px;
+}
+
+.card-title {
+    position :absolute;
+    text-align: center;
+    color: white;
+    max-width: 220px;
+    font-size: 22px;
+
+}
