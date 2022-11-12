@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MovieComponent } from './components/movie/movie.component';
-import { SingleMovieCardComponent } from './single-movie-card/single-movie-card.component';
+ 
 
 const routes: Routes = [
   {path:"",redirectTo: 'movie',pathMatch:"full"},
@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: "movie", component: MovieComponent },
-  { path: "card", component: SingleMovieCardComponent },
     {path: '**' , component:LoginComponent}
 ];
 
