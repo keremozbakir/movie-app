@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { TransporterService } from 'src/app/services/transporter.service';
-import moviesJson from '../movie/movies.json'
+import moviesJson from '../movie/movies.json';
 import upcomingMovies from "../movie/moviesUpcoming.json";
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
