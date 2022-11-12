@@ -30,13 +30,15 @@
             <a class="nav-link disabled">Premium</a>
           </li>
         </ul>
-        <div class="d-flex" role="search">
-          <img src="../../../assets/images/search (3).png" class="search-image"/>
-          <!-- <input [(ngModel)]="data" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" > -->
-          <button (click)="searchWord()"  class="btn btn-outline-success" type="submit">search</button>
-          
-     
-        </div>
+        <div class="search-container">
+        <form action="" method="">
+          <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+          <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+        </form>
+      </div>
+          <a href="#" class="button">Search</a>
+          <br>
+       
       </div>
     </div>
   </nav>

@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http"
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SingleMovieCardComponent } from './single-movie-card/single-movie-card.component';
+ 
 
 @NgModule({
   declarations: [
@@ -18,8 +18,7 @@ import { SingleMovieCardComponent } from './single-movie-card/single-movie-card.
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    MovieComponent,
-    SingleMovieCardComponent,
+    MovieComponent 
   ],
   imports: [
     BrowserModule,
