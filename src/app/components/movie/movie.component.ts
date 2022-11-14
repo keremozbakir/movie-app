@@ -4,6 +4,10 @@ import { TransporterService } from 'src/app/services/transporter.service';
 import moviesJson from '../movie/movies.json';
 import upcomingMovies from "../movie/moviesUpcoming.json";
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+
+
 
 @Component({
   selector: 'app-movie',
@@ -17,7 +21,8 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void { }
    
  
-
+  faChevronCircleRight = faChevronCircleRight;
+  faChevronCircleLeft = faChevronCircleLeft;
 
 allMovies=moviesJson
 upcomingMovies = upcomingMovies
@@ -32,8 +37,9 @@ customOptions: OwlOptions = {
   navSpeed: 700,
   nav: true,
   navText: [
-    "<i class='fa fa-caret-left' aria-hidden='true'></i>",
-    "<i class='fa fa-caret-right' aria-hidden='true'></i>"
+    "<i class='fa-sharp fa-solid fa-circle-caret-right'></i>",
+    "<i class='fa-sharp fa-solid fa-circle-caret-left'></i>"
+   
   ],
   
   

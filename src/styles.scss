@@ -12,7 +12,7 @@ html{
 display: none;
 }
 
- .movies-section .owl-next{
+ .movies-section .owl-prev{
 	background-color: #212529 !important;
 	color: red !important;
 	position: absolute !important;
@@ -21,10 +21,11 @@ display: none;
 	top: 150px;
 	right: -30px;
 	font-size: 32px !important;
+	opacity: 0 !important;
 	 
 }
 
-.movies-section .owl-prev{
+.movies-section .owl-next{
 	background-color: #212529 !important;
 	color: red !important;
 	position: absolute !important;
@@ -33,5 +34,6 @@ display: none;
 	top: 150px;
 	left: -30px;
 	font-size: 32px !important;
-	 
+	opacity: 0 !important;
 }
+

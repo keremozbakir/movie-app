@@ -4,8 +4,10 @@
 
 .card{
      height: 350px;
-     margin-right: 12px;
+     margin-right: 10px;
+     margin-left: 10px;
 }
+ 
 
 .card-body{
     height: 20px !important
@@ -14,6 +16,42 @@
     height: 350px;
 }
 body {background-color: #212529;}
+
+.chevronright{
+    background-color: transparent;
+    color: white;
+    font: 2em sans-serif;
+    position: relative;
+    left: 1640px;
+    bottom: 200px;
+    opacity: 0;
+    transition: opacity 3s;
+     
+}.movies-section:hover .chevronright {  
+    opacity: 1;
+    transition: opacity 0s;
+}
+
+
+
+
+ 
+.chevronLeft{
+    background-color: transparent;
+    color: white;
+    font: 2em sans-serif;
+    position: relative;
+    right: 67px;
+    bottom:190px;
+    opacity: 0;
+    transition: opacity 3s;
+}.movies-section:hover .chevronLeft {  
+    opacity: 1;
+    transition: opacity 0s;
+}
+ 
+
+
 
 .movies-section{
     background-color: #212529;
