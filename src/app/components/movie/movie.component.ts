@@ -17,6 +17,8 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void { }
    
  
+
+
 allMovies=moviesJson
 upcomingMovies = upcomingMovies
 customOptions: OwlOptions = {
@@ -28,7 +30,13 @@ customOptions: OwlOptions = {
   pullDrag: true,
   dots: false,
   navSpeed: 700,
-  navText: ['', ''],
+  nav: true,
+  navText: [
+    "<i class='fa fa-caret-left' aria-hidden='true'></i>",
+    "<i class='fa fa-caret-right' aria-hidden='true'></i>"
+  ],
+  
+  
   responsive: {
     0: {
       items: 1
@@ -51,8 +59,7 @@ customOptions: OwlOptions = {
     1540: {
       items: 7
     }   
-  },
-  nav: false
+  }
 }
 
  

@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+ 
+@import '~font-awesome/scss/font-awesome.scss';
 body{background-color: black;}
 
 html{
@@ -8,4 +10,28 @@ html{
 
 ::-webkit-scrollbar {
 display: none;
+}
+
+ .movies-section .owl-next{
+	background-color: #212529 !important;
+	color: red !important;
+	position: absolute !important;
+	height: 60px ;
+	width: 20px;
+	top: 150px;
+	right: -30px;
+	font-size: 32px !important;
+	 
+}
+
+.movies-section .owl-prev{
+	background-color: #212529 !important;
+	color: red !important;
+	position: absolute !important;
+	height: 60px ;
+	width: 20px;
+	top: 150px;
+	left: -30px;
+	font-size: 32px !important;
+	 
 }

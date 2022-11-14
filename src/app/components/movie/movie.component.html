@@ -1,7 +1,7 @@
  
 
- <div class="body">
-  <div class="movies-section">
+ <div class="body  ">
+  <div class="movies-section carousel-wrap">
     <owl-carousel-o [options]="customOptions"    >
       <ng-template carouselSlide *ngFor="let movie of allMovies.d" style="width: 200px; background-color: black;">  
         <div class="card" >
@@ -10,6 +10,15 @@
         </div>
       </ng-template> 
     </owl-carousel-o>
+    <h2 class="section-titles">Populer On Netflix</h2>
+    <owl-carousel-o [options]="customOptions"   >
+      <ng-template carouselSlide *ngFor="let movie of upcomingMovies.d" style="width: 200px;">  
+        <div class="card" >
+          <img class="card-img-top image-size" src="{{movie.i.imageUrl}}" alt="Card image cap" >
+        </div>
+      </ng-template> 
+    </owl-carousel-o>
+
     <h2 class="section-titles">Populer On Netflix</h2>
     <owl-carousel-o [options]="customOptions"   >
       <ng-template carouselSlide *ngFor="let movie of upcomingMovies.d" style="width: 200px;">  
