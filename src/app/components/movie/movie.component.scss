@@ -19,6 +19,7 @@ body {background-color: #212529;}
     background-color: #212529;
     padding: 0 40px 0 40px;
     position: relative;
+    bottom: 180px;
 }
 
 .section-titles{
@@ -26,5 +27,50 @@ body {background-color: #212529;}
     padding:  20px ;
     font-family: 'Noto Sans', sans-serif;
 }
+.main-image{
+     
+    width: 100%;
+    height: 550px;
+  
+}
 
- 
+.main-image-area{
+    position: relative;
+}
+.main-image-button{
+    position: relative;
+    top:-280px;
+    left: 1100px;
+    color: white;
+    background-color: black;
+    font-family: 'Noto Sans', sans-serif;
+    border-color: white;
+    height: 40px;
+    width: 70px;
+}.main-image-button:hover{
+    color:red;
+    border-color: red;
+}
+
+
+.main-image-title{
+    position: relative;
+    color: red;
+    font-family: 'Noto Sans', sans-serif;
+    top:-280px;
+    left: 1100px;
+}
+.main-image-text{
+    position: relative;
+    color:white;
+    top:-280px;
+    left: 1100px;
+    width: 500px;
+    word-wrap: break-word;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.main-movie-text-area{
+    position: relative;
+    top:15px
+}
