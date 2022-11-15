@@ -17,19 +17,18 @@
 }
 body {background-color: #212529;}
 
-.chevronright{
+.chevronRight{
     background-color: transparent;
     color: white;
     font: 2em sans-serif;
-    position: relative;
-    left: 2070px;
-    bottom: 200px;
+    position: absolute;
+    left: 1634px;
+    bottom: 160px;
     opacity: 0;
-    transition: opacity 3s;
      
-}.movies-section:hover .chevronright {  
+}.movies-section:hover .chevronRight {  
     opacity: 1;
-    transition: opacity 0s;
+    transition: opacity 0.5s;
 }
 
 .card{
@@ -42,17 +41,20 @@ body {background-color: #212529;}
     background-color: transparent;
     color: white;
     font: 2em sans-serif;
-    position: relative;
-    right: 67px;
-    bottom:190px;
-    opacity: 0;
-    transition: opacity 3s;
+    position: absolute;
+    left: -29px;
+    bottom: 160px;
+    opacity:0;
+
+  
 }.movies-section:hover .chevronLeft {  
     opacity: 1;
-    transition: opacity 0s;
+    transition: opacity 0.5s;
 }
  
-
+.chevrons{
+    position: relative;
+}
 
 
 .movies-section{
