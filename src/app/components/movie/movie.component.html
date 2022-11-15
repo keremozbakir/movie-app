@@ -17,43 +17,10 @@
   </div>
   
   <div class="movies-section carousel-wrap">
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide *ngFor="let movie of allMovies.d" style="width: 200px; background-color: black;">  
-        <div class="card" >
-          <img class="card-img-top image-size" src="{{movie.i.imageUrl}}" alt="Card image cap" >
-          
-        </div>
-      </ng-template> 
-    </owl-carousel-o>
-    <fa-icon [icon]="faChevronCircleRight" class="chevronright"></fa-icon>
-    <fa-icon [icon]="faChevronCircleLeft" class="chevronLeft"></fa-icon>
-
-    <h2 class="section-titles">Populer On Netflix</h2>
-    <owl-carousel-o [options]="customOptions"   >
-      <ng-template carouselSlide *ngFor="let movie of upcomingMovies.d" style="width: 200px;">  
-        <div class="card" >
-          <img class="card-img-top image-size" src="{{movie.i.imageUrl}}" alt="Card image cap" >
-        </div>
-      </ng-template> 
-    </owl-carousel-o>
-    <fa-icon [icon]="faChevronCircleRight" class="chevronright"></fa-icon>
-    <fa-icon [icon]="faChevronCircleLeft" class="chevronLeft"></fa-icon>
-
-    <h2 class="section-titles">Populer On Netflix</h2>
-    <owl-carousel-o [options]="customOptions"   >
-      <ng-template carouselSlide *ngFor="let movie of upcomingMovies.d" style="width: 200px;">  
-        <div class="card" >
-          <img class="card-img-top image-size" src="{{movie.i.imageUrl}}" alt="Card image cap" >
-        </div>
-      </ng-template> 
-    </owl-carousel-o>
-    <fa-icon [icon]="faChevronCircleRight" class="chevronright"></fa-icon>
-    <fa-icon [icon]="faChevronCircleLeft" class="chevronLeft"></fa-icon>
-
     <h2 class="section-titles">Populer</h2>
     <owl-carousel-o [options]="customOptions"   >
-      <ng-template carouselSlide *ngFor="let movie of popularMovie?.results" style="width: 200px;">  
-        <div class="card " >
+      <ng-template carouselSlide *ngFor="let movie of popularMovie?.results" >  
+        <div class="card">
           <p class="movie-title">{{movie.title}}</p>
           <img class="card-img-top image-size single-image" src="{{movie.backdrop_path}}" alt="Card image cap" >
         </div>
@@ -61,6 +28,34 @@
     </owl-carousel-o>
     <fa-icon [icon]="faChevronCircleRight" class="chevronright"></fa-icon>
     <fa-icon [icon]="faChevronCircleLeft" class="chevronLeft"></fa-icon>
+
+
+    <h2 class="section-titles">Top Rated  </h2>
+    <owl-carousel-o [options]="customOptions"   >
+      <ng-template carouselSlide *ngFor="let m of topRated?.results" >  
+        <div class="card">
+          <p class="movie-title">{{m.title}}</p>
+          <img class="card-img-top image-size single-image" src="{{m.backdrop_path}}" alt="Card image cap" >
+        </div>
+      </ng-template> 
+    </owl-carousel-o>
+    <fa-icon [icon]="faChevronCircleRight" class="chevronright"></fa-icon>
+    <fa-icon [icon]="faChevronCircleLeft" class="chevronLeft"></fa-icon>
+
+    <h2 class="section-titles">Upcoming</h2>
+    <owl-carousel-o [options]="customOptions"   >
+      <ng-template carouselSlide *ngFor="let m of upcoming?.results" >  
+        <div class="card">
+          <p class="movie-title">{{m.title}}</p>
+          <img class="card-img-top image-size single-image" src="{{m.backdrop_path}}" alt="Card image cap" >
+        </div>
+      </ng-template> 
+    </owl-carousel-o>
+    <fa-icon [icon]="faChevronCircleRight" class="chevronright"></fa-icon>
+    <fa-icon [icon]="faChevronCircleLeft" class="chevronLeft"></fa-icon>
+
+
+     
 
 
    </div> 

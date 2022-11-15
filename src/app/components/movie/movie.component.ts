@@ -22,8 +22,8 @@ export class MovieComponent implements OnInit {
   constructor(private httpClient: HttpClient, private dataService:DataService) { }
   latestMovie !: any;
   popularMovie !: Movie;
-  nowPlaying !: Movie;
   topRated !: Movie;
+  nowPlaying !: Movie;
   upcoming !: Movie;
   faChevronCircleRight = faChevronCircleRight;
   faChevronCircleLeft = faChevronCircleLeft;
@@ -40,13 +40,6 @@ export class MovieComponent implements OnInit {
   }
 
    
-  getLatestMovie() {
-    this.dataService.getLatestData().subscribe((res: any) => {
-      this.latestMovie = this.changeData(res)
-      console.log(res)
-    })
-  }
-
   changeData(res:any):any {
     if (!res.backdrop_path) {
       res.backdrop_path= "https://image.tmdb.org/t/p/original" + res.poster_path + '?api_key=' + environment.api_key;
@@ -55,17 +48,26 @@ export class MovieComponent implements OnInit {
     }
   }
 
+  getLatestMovie() {
+    this.dataService.getLatestData().subscribe((res: any) => {      //returns single movie
+      this.latestMovie = res
+      //console.log(res)
+    })
+  }
+
+  
+
   getPopularMovies() {
     this.dataService.getPopularMovies().subscribe((res: any) => {
       this.popularMovie = this.modifyData(res)
-      console.log(this.popularMovie)
+      //console.log(this.popularMovie)
     })
   }
 
   getNowPlaying() {
     this.dataService.getNowPlayingMovies().subscribe((res: any) => {
       this.nowPlaying = this.modifyData(res)
-      console.log(this.nowPlaying)
+     // console.log(this.nowPlaying)
     })
   }
 
@@ -73,14 +75,14 @@ export class MovieComponent implements OnInit {
   getTopRated() {
     this.dataService.getTopRatedMovies().subscribe((res: any) => {
       this.topRated = this.modifyData(res)
-      console.log(this.topRated)
+      //console.log(this.topRated)
     })
   }
 
   getUpcoming() {
     this.dataService.getUpcomingMovies().subscribe((res: any) => {
       this.upcoming = this.modifyData(res)
-      console.log(this.upcoming)
+     // console.log(this.upcoming)
     })
   }
 

@@ -22,7 +22,7 @@ body {background-color: #212529;}
     color: white;
     font: 2em sans-serif;
     position: relative;
-    left: 1640px;
+    left: 2070px;
     bottom: 200px;
     opacity: 0;
     transition: opacity 3s;
@@ -32,7 +32,9 @@ body {background-color: #212529;}
     transition: opacity 0s;
 }
 
-
+.card{
+    height:352px;
+}
 
 
  
@@ -83,10 +85,12 @@ body {background-color: #212529;}
     padding:  20px ;
     font-family: 'Noto Sans', sans-serif;
 }
+
+ 
 .main-image{
      
     width: 100%;
-    height: 550px;
+    height: 1000px;
   
 }
 
@@ -121,12 +125,14 @@ body {background-color: #212529;}
     color:white;
     top:-280px;
     left: 1100px;
-    width: 500px;
+    width: 700px;
+    font-size: large;
     word-wrap: break-word;
     font-family: 'Noto Sans', sans-serif;
 }
 
 .main-movie-text-area{
-    position: relative;
-    top:15px
+    position: absolute;
+    top:810px;
+    left:240px;
 }
