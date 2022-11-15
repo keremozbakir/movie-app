@@ -49,6 +49,20 @@
     </owl-carousel-o>
     <fa-icon [icon]="faChevronCircleRight" class="chevronright"></fa-icon>
     <fa-icon [icon]="faChevronCircleLeft" class="chevronLeft"></fa-icon>
+
+    <h2 class="section-titles">Populer</h2>
+    <owl-carousel-o [options]="customOptions"   >
+      <ng-template carouselSlide *ngFor="let movie of popularMovie?.results" style="width: 200px;">  
+        <div class="card " >
+          <p class="movie-title">{{movie.title}}</p>
+          <img class="card-img-top image-size single-image" src="{{movie.backdrop_path}}" alt="Card image cap" >
+        </div>
+      </ng-template> 
+    </owl-carousel-o>
+    <fa-icon [icon]="faChevronCircleRight" class="chevronright"></fa-icon>
+    <fa-icon [icon]="faChevronCircleLeft" class="chevronLeft"></fa-icon>
+
+
    </div> 
  </div>
   

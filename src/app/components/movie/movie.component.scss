@@ -59,7 +59,25 @@ body {background-color: #212529;}
     position: relative;
     bottom: 180px;
 }
+.movie-title{
+    position: absolute;
+    color: purple;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    top:50%;
+    opacity: 0;
+   
 
+}
+
+ 
+.card:hover .movie-title{
+   color: red;
+   opacity: 1;
+   transition: opacity 0.5s;
+   font-size: xx-large;
+    
+}
 .section-titles{
     color: white;
     padding:  20px ;
