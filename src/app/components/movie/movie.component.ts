@@ -1,15 +1,11 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { TransporterService } from 'src/app/services/transporter.service';
-import moviesJson from '../movie/movies.json';
-import upcomingMovies from "../movie/moviesUpcoming.json";
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { DataService } from 'src/app/services/data.service';
 import { Movie } from 'src/app/Model/movie';
 import { environment } from 'src/environments/environment';
-
 
 
 @Component({
@@ -27,8 +23,8 @@ export class MovieComponent implements OnInit {
   upcoming !: Movie;
   faChevronCircleRight = faChevronCircleRight;
   faChevronCircleLeft = faChevronCircleLeft;
-  allMovies=moviesJson
-  upcomingMovies = upcomingMovies
+  
+  randomNum!:number;
   ngOnInit(): void {
     
     this.getLatestMovie();
@@ -36,10 +32,18 @@ export class MovieComponent implements OnInit {
     this.getPopularMovies();
     this.getTopRated();
     this.getUpcoming();
-    
+    this.getNowPlaying()
+    this.randomNum = this.randomNumber(0, 19);
   }
 
+  randomNumber(min: any, max: any):any {
+    var randomNumber=Math.floor(Math.random() * (max - min + 1)) + min;
+     
+    return randomNumber
+  }
    
+
+
   changeData(res:any):any {
     if (!res.backdrop_path) {
       res.backdrop_path= "https://image.tmdb.org/t/p/original" + res.poster_path + '?api_key=' + environment.api_key;
@@ -50,7 +54,7 @@ export class MovieComponent implements OnInit {
 
   getLatestMovie() {
     this.dataService.getLatestData().subscribe((res: any) => {      //returns single movie
-      this.latestMovie = res
+      this.latestMovie =this.modifyData(res)
       //console.log(res)
     })
   }
@@ -66,8 +70,11 @@ export class MovieComponent implements OnInit {
 
   getNowPlaying() {
     this.dataService.getNowPlayingMovies().subscribe((res: any) => {
-      this.nowPlaying = this.modifyData(res)
-     // console.log(this.nowPlaying)
+
+      res.results[this.randomNum].backdrop_path = "https://image.tmdb.org/t/p/original" + res.results[this.randomNum].backdrop_path
+     
+      this.nowPlaying = this.modifyData(res.results[this.randomNum])
+      
     })
   }
 
