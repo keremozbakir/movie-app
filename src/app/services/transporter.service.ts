@@ -5,10 +5,11 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class TransporterService {
-  searchWord = new Subject();
-  constructor() { }
+   
+  public searchedMovies: any;
+  sendMessage = new Subject();
 
-  sendSearchWord(msg:string) {
-    this.searchWord.next(msg)
+  communicate(msg:any) {
+    this.sendMessage.next(msg)
   }
 }

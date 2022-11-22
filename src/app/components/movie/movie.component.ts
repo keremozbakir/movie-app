@@ -6,6 +6,7 @@ import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { DataService } from 'src/app/services/data.service';
 import { Movie } from 'src/app/Model/movie';
 import { environment } from 'src/environments/environment';
+import { TransporterService } from 'src/app/services/transporter.service';
 
 
 @Component({
@@ -38,7 +39,6 @@ export class MovieComponent implements OnInit {
 
   randomNumber(min: any, max: any):any {
     var randomNumber=Math.floor(Math.random() * (max - min + 1)) + min;
-     
     return randomNumber
   }
    

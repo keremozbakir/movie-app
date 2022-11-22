@@ -29,12 +29,12 @@
         
         </ul>
         <div class="search-container">
-        <form action="" method="">
-          <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+        <form >
+          <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search" [(ngModel)] ='searchVal'>
           <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
         </form>
       </div>
-          <a href="#" class="button search-button">Search</a>
+          <a  class="button search-button" (click)="search()">Search</a>
           <br>
        
       </div>
