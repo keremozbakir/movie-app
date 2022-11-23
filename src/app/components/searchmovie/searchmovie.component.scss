@@ -1,14 +1,15 @@
 .card{
     height: 250px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin :10px 10px 10px 10px;
     border-radius:0;
     border: 0;
     margin-bottom: 20px;
     background-color: black !important;
 }
 
- 
+ .single-image{
+   height: 230px;
+ }
  .movie-section{
     position: relative;
     left: 130px;
