@@ -36,9 +36,10 @@ body {background-color: black;}
     color: white;
     font: 1.5em sans-serif;
     position: absolute;
-    left: 1830px;
+    right : -26px;
     bottom: 95px;
     opacity: 0;
+    z-index: 11111111111;
      
      
 }.movies-section:hover .chevronRight {  
