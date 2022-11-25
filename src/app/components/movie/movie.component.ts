@@ -7,6 +7,7 @@ import { DataService } from 'src/app/services/data.service';
 import { Movie } from 'src/app/Model/movie';
 import { environment } from 'src/environments/environment';
 import { TransporterService } from 'src/app/services/transporter.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,7 @@ import { TransporterService } from 'src/app/services/transporter.service';
 })
 export class MovieComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient, private dataService:DataService) { }
+  constructor(private httpClient: HttpClient, private dataService:DataService,private route:Router) { }
   latestMovie !: any;
   popularMovie !: Movie;
   topRated !: Movie;
@@ -24,7 +25,7 @@ export class MovieComponent implements OnInit {
   upcoming !: Movie;
   faChevronCircleRight = faChevronCircleRight;
   faChevronCircleLeft = faChevronCircleLeft;
-  
+ 
   randomNum!:number;
   ngOnInit(): void {
     
@@ -35,6 +36,11 @@ export class MovieComponent implements OnInit {
     this.getUpcoming();
     this.getNowPlaying()
     this.randomNum = this.randomNumber(0, 19);
+  }
+  movieName: any;
+  movieImageUrl: any;
+  singleMovieNavigate(event:any,title:any,imageUrl:any) {
+    this.route.navigate(['/detail'],{queryParams:{movieName:title,imageUrl:imageUrl}})
   }
 
   randomNumber(min: any, max: any):any {

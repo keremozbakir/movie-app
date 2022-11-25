@@ -3,7 +3,7 @@
  <div class="body  ">
   
   <div class="main-image-area">
-    <img src="{{nowPlaying.backdrop_path}}"  class="main-image">
+    <img src="{{nowPlaying.backdrop_path}}"  class="main-image" >
     <div class="main-movie-text-area">
       <h2 class="main-image-title">{{nowPlaying.title}}</h2>
       <p class="main-image-text">{{nowPlaying.overview}} </p>
@@ -17,9 +17,11 @@
     <h2 class="section-titles">Populer</h2>
     <owl-carousel-o [options]="customOptions"   >
       <ng-template carouselSlide *ngFor="let movie of popularMovie?.results" >  
-        <div class="card">
-          <p class="movie-title">{{movie.title}}</p>
+        <div class="card" (click)="singleMovieNavigate($event,movie.title,movie.backdrop_path)">
+          <p class="movie-title" >{{movie.title}}</p>
           <img class="card-img-top image-size single-image" src="{{movie.backdrop_path}}" alt="Card image cap" >
+          <!-- [routerLink] = "['/detail']" -->
+
         </div>
       </ng-template> 
     </owl-carousel-o>
@@ -33,10 +35,10 @@
 
     <h2 class="section-titles">Top Rated  </h2>
     <owl-carousel-o [options]="customOptions"   >
-      <ng-template carouselSlide *ngFor="let m of topRated?.results" >  
-        <div class="card">
-          <p class="movie-title">{{m.title}}</p>
-          <img class="card-img-top image-size single-image" src="{{m.backdrop_path}}" alt="Card image cap" >
+      <ng-template carouselSlide *ngFor="let movie of topRated?.results" >  
+        <div class="card" (click)="singleMovieNavigate($event,movie.title,movie.backdrop_path)">
+          <p class="movie-title">{{movie.title}}</p>
+          <img class="card-img-top image-size single-image" src="{{movie.backdrop_path}}" alt="Card image cap" >
         </div>
       </ng-template> 
     </owl-carousel-o>
@@ -47,10 +49,10 @@
 
     <h2 class="section-titles">Upcoming</h2>
     <owl-carousel-o [options]="customOptions"   >
-      <ng-template carouselSlide *ngFor="let m of upcoming?.results" >  
-        <div class="card">
-          <p class="movie-title">{{m.title}}</p>
-          <img class="card-img-top image-size single-image" src="{{m.backdrop_path}}" alt="Card image cap" >
+      <ng-template carouselSlide *ngFor="let movie of upcoming?.results" >  
+        <div class="card" (click)="singleMovieNavigate($event,movie.title,movie.backdrop_path)">
+          <p class="movie-title">{{movie.title}}</p>
+          <img class="card-img-top image-size single-image" src="{{movie.backdrop_path}}" alt="Card image cap" >
         </div>
       </ng-template> 
     </owl-carousel-o>

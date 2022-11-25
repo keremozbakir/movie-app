@@ -1,0 +1,109 @@
+  
+.movie-box{
+    position:absolute;
+    margin-top: 20px;
+    left: 620px;
+    height:750px;
+    width: 700px;
+    object-fit: cover;
+    background-color: lightblue;
+   
+    //box-shadow: 0 0 0 99999px rgba(0, 0, 0, .5);
+
+    
+}
+.single-image{
+    position: relative;
+    
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    filter: brightness(70%);
+    z-index: 1 ;
+}
+.movie-description{
+    position: relative;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    max-width: 500px;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+
+.right-texts{
+    position: absolute;
+    height: 80px;
+    width: 220px;
+    left: 450px;
+    bottom: 250px;
+    z-index: 10000;
+}
+
+.imdb{
+    position: relative;
+    color:white;
+  
+    filter: blur(0.5px);
+    font-size: large;
+    z-index: 10000;
+}
+.language{
+    color:white;
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    filter: blur(0.5px);
+}
+
+
+.netflix-data-image{
+    max-width: 350px;
+    margin-left: 50px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.netflix-today-image{
+    max-width: 350px;
+    margin-left: 50px;
+    position: relative;
+    top:-5px; 
+}
+
+
+.title{
+    position: relative;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    margin-left: 50px;
+
+}
+.gray-area{
+    height: 400px;
+    background-color: #181818;    
+}
+
+.main-image-button{
+    position: relative;
+    bottom: 460px;
+    left: 20px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background-color: white;
+    font-family: 'Noto Sans', sans-serif;
+    border-color: white;
+    height: 40px;
+    width: 150px;
+    z-index: 10000;
+
+}.main-image-button:hover{
+    filter: brightness(80%)
+
+}
+ .play-icon{
+    position: relative;
+    right: 18px;
+    bottom: 3px;
+ }

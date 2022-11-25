@@ -12,6 +12,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchmovieComponent } from './components/searchmovie/searchmovie.component';
+import { SingleMovieComponent } from './components/single-movie/single-movie.component';
  
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SearchmovieComponent } from './components/searchmovie/searchmovie.compo
     HomeComponent,
     HeaderComponent,
     MovieComponent,
-    SearchmovieComponent
+    SearchmovieComponent,
+    SingleMovieComponent
   ],
   imports: [
     BrowserModule,

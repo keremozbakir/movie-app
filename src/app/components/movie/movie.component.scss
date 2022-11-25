@@ -39,7 +39,7 @@ body {background-color: black;}
     right : -26px;
     bottom: 95px;
     opacity: 0;
-    z-index: 11111111111;
+     
      
      
 }.movies-section:hover .chevronRight {  
@@ -74,7 +74,7 @@ body {background-color: black;}
     background-color: #212529;
     padding: 0 40px 0 40px;
     position: relative;
-    bottom: 180px;
+    bottom: 220px;
 }
 .movie-title{
     position: absolute;
@@ -143,7 +143,7 @@ body {background-color: black;}
     top:-280px;
     left: 100px;
     width: 600px;
-    font-size: small;
+    font-size: medium;
     word-wrap: break-word;
     font-family: 'Noto Sans', sans-serif;
 }

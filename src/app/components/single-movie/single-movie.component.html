@@ -1,0 +1,18 @@
+
+<div class="movie-box" *ngFor="let movie of searchedMovies.results">
+    <img class="card-img-top image-size single-image" src="{{movie.backdrop_path}}" alt="Card image cap" >
+    
+    <div class="gray-area">
+        <img class="netflix-data-image" src="../../../assets/images/netflix-data.jpeg" alt="Card image cap" >
+        <img class="netflix-today-image" src="../../../assets/images/no-6-netflix.jpg" alt="Card image cap" >      
+        <div class="text-area">
+            <h2 class="title">{{movie.title}}</h2>
+            <p class="movie-description">{{movie.overview | slice:0:400}}..</p>
+        </div>
+        <div class="right-texts">
+            <p class="imdb">IMDB:  {{movie.vote_average}} </p>
+            <p class="language">Language: {{movie.original_language| uppercase}}</p>
+        </div>
+    </div>
+    <button class="main-image-button"><img class="play-icon" src="../../../assets/images/play (2).png" >Play</button>
+</div>
