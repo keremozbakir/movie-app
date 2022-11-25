@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, QueryList } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
@@ -39,8 +39,10 @@ export class MovieComponent implements OnInit {
   }
   movieName: any;
   movieImageUrl: any;
-  singleMovieNavigate(event:any,title:any,imageUrl:any) {
-    this.route.navigate(['/detail'],{queryParams:{movieName:title,imageUrl:imageUrl}})
+  movieId: any;
+  singleMovieNavigate(event: any, id: any) {
+    console.log("this is id : ", id)
+    this.route.navigate(['/detail'],{queryParams:{movieId:id}})
   }
 
   randomNumber(min: any, max: any):any {

@@ -15,20 +15,26 @@ export class SingleMovieComponent implements OnInit {
   //imageUrl = 'https://www.formula1.com/content/dam/fom-website/manual/Misc/2021manual/2021BritishManualAdds/2022CarImages/2022CarImageSTUDIO/2022%20F1%20Car%20Race%20Service%20-%20Ryan%20Davis-5.jpg.transform/9col/image.jpg'
   movieName!: any;
   imageUrl!: any;
-  searchedMovies!: any;
+  movieId!: any;
+  searchedMovie!: any;
+  movieOverview!: any;
+
+
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(params => {
-      this.movieName=params.get('movieName')
-      this.imageUrl=params.get('imageUrl')
+      this.movieId = params.get('movieId')
     })
-    this.getSearchMovies(this.searchedMovies)
+    this.getMoviesById(this.movieId)
      
   }
 
-  getSearchMovies(queryString:any) {
-    this.dataService.getSearchMovies(String(this.movieName)).subscribe((res: any) => {
-      this.searchedMovies = this.modifyData(res)
-      console.log(this.searchedMovies)
+  getMoviesById(queryString:any) {
+    this.dataService.getSearchMoviesById(String(queryString)).subscribe((res: any) => {
+      this.searchedMovie = this.modifyData(res)
+     this.movieName = res.original_title
+      this.imageUrl = "https://image.tmdb.org/t/p/original" + res.backdrop_path;
+      this.movieOverview = res.overview
+      console.log(this.movieName,this.imageUrl,this.movieOverview)
     })
   }
 

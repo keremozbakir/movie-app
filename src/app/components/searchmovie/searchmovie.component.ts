@@ -3,7 +3,7 @@ import { Movie } from 'src/app/Model/movie';
 import { DataService } from 'src/app/services/data.service';
 import { TransporterService } from 'src/app/services/transporter.service';
 import { environment } from 'src/environments/environment';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NgModel } from '@angular/forms';
 //import { CommonModule } from '@angular/common'; 
 @Component({
@@ -16,20 +16,21 @@ import { NgModel } from '@angular/forms';
    
 export class SearchmovieComponent implements OnInit {
 
-  constructor(private dataService: DataService, private transporterService: TransporterService,private route: ActivatedRoute) { }
+  constructor(private dataService: DataService,  private activatedRoute: ActivatedRoute,private route:Router) { }
   
   searchedMovies !: Movie;
   ngOnInit(): void {
-    this.route.params.subscribe((params: Params) => {
+    this.activatedRoute.params.subscribe((params: Params) => {
       this.searchedMovies = params['searchMovie']
       this.getSearchMovies(this.searchedMovies)
-      console.log("inside searchmovie component , " +this.searchedMovies)
     });
-   
-    //console.log("inside searchmovie component , " +this.searchedMovies)
   }
 
- 
+  movieId: any;
+  singleMovieNavigate(event: any, id: any) {
+    console.log("this is id : ", id)
+    this.route.navigate(['/detail'],{queryParams:{movieId:id}})
+  }
  
   getSearchMovies(queryString:any) {
     this.dataService.getSearchMovies(String(queryString)).subscribe((res: any) => {

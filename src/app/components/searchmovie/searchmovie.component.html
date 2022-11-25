@@ -5,7 +5,7 @@
                 <div  *ngFor="let movie of searchedMovies.results" class="card col-md-2" >
                     <div >
                         
-                        <img class="card-img-top image-size single-image" src="{{movie.backdrop_path}}" alt="Card image cap" >
+                        <img class="card-img-top image-size single-image" src="{{movie.backdrop_path}}" alt="Card image cap" (click)="singleMovieNavigate($event,movie.id)" >
                     </div>
                     <br>
                     <br>

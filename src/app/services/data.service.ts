@@ -16,7 +16,12 @@ export class DataService {
 
   getSearchMovies(queryData:string): any{
     return this.http.get<any>(this.url+'/search/movie?api_key='+environment.api_key+'&language=en-US&query='+queryData+'&page=1&include_adult=false')
+  }
+  
+  getSearchMoviesById(queryData:string): any{
+    return this.http.get<any>(this.url+'/movie/'+queryData+'?api_key='+environment.api_key+'&language=en-US')
  }
+
   
   getLatestData(): any{
     return this.http.get<any>(this.url+'/movie/latest?api_key='+environment.api_key)
