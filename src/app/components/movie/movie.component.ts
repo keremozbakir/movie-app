@@ -25,7 +25,7 @@ export class MovieComponent implements OnInit {
   upcoming !: Movie;
   faChevronCircleRight = faChevronCircleRight;
   faChevronCircleLeft = faChevronCircleLeft;
- 
+  innerWidth!: any;
   randomNum!:number;
   ngOnInit(): void {
     
@@ -36,6 +36,8 @@ export class MovieComponent implements OnInit {
     this.getUpcoming();
     this.getNowPlaying()
     this.randomNum = this.randomNumber(0, 19);
+    this.innerWidth = window.innerWidth;
+    this.innerWidthSet()
   }
   movieName: any;
   movieImageUrl: any;
@@ -43,6 +45,17 @@ export class MovieComponent implements OnInit {
   singleMovieNavigate(event: any, id: any) {
     console.log("this is id : ", id)
     this.route.navigate(['/detail'],{queryParams:{movieId:id}})
+  }
+
+  innerWidthSet() {
+    if (this.innerWidth < 821 && this.innerWidth>375) {
+      console.log("Apple ipad air", this.innerWidth)
+      
+    } else if (this.innerWidth < 375) {
+      console.log("this is an iphone", this.innerWidth)
+    } else {
+      console.log("this is a pc device !",this.innerWidth)
+    }
   }
 
   randomNumber(min: any, max: any):any {
@@ -123,6 +136,7 @@ export class MovieComponent implements OnInit {
 customOptions: OwlOptions = {
   loop: true,
   mouseDrag: true,
+  //responsive:true,
   margin: 0,
   autoWidth:true,
   touchDrag: true,
@@ -139,9 +153,9 @@ customOptions: OwlOptions = {
   
   responsive: {
     0: {
-      items: 1
+      items:2
     },
-    400: {
+    370: {
       items: 2
     },
     740: {

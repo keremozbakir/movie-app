@@ -28,15 +28,23 @@
           </li>
         
         </ul>
-        <div class="search-container">
-        <form >
-          <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search" [(ngModel)] ='searchVal'>
-          <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
-        </form>
-      </div>
-          <a  class="button search-button" (click)="search()">Search</a>
-          <br>
+        
+          
        
       </div>
     </div>
   </nav>
+
+<div class="search-area">
+  
+    <div class="search-container">
+    <form action="/search" method="get">
+      <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search" [(ngModel)] ='searchVal'>
+      <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+    </form>
+  </div>
+  <a class="button" (click)="search()">Search</a>
+  <br>
+</div>
+
+  

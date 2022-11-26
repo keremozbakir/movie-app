@@ -182,6 +182,51 @@
     height: 1750px;
 } 
  
- 
+ }
 
+
+ @media(max-width:376px){
+    .main-image-title{
+        position: relative;
+     
+        color: green;
+        font-family: 'Noto Sans', sans-serif;
+        max-width: 550px;
+       
+    } .main-image-text{
+        position: relative;
+        color:white;
+       
+        max-width: 300px;
+        font-size: small;
+        word-wrap: break-word;
+        font-family: 'Noto Sans', sans-serif;
+    }.movies-section{
+        background-color: #212529;
+        padding: 0 40px 0 40px;
+        position: relative;
+        bottom: 220px;
+        height:900px;
+
+    }
+    .body{
+        height: 550px;
+        //background-color: red;
+    }.main-image{
+        width: 100%;
+        height: 400px;
+        filter: brightness(75%);
+    }.main-movie-text-area{
+        position: absolute;
+        background-color: transparent;
+        z-index: 10000;
+        bottom: 235px;
+        left: 50px;
+         
+        
+    }.main-image-title{
+        
+        font-size: large;
+       
+    }
  }

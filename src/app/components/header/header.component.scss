@@ -36,15 +36,26 @@ body{
 	
 }
 
+
+
+
+//search section
+ 
+.search-area{
+	position: absolute;
+	left: 1490px;
+	top:4px;
+	z-index: 10000;
+}
+  
 .button {
-    font-family: 'Noto Sans', sans-serif;
+position: relative;
 	display: inline-block;
 	margin: 4px 2px;
 	background-color: #444;
 	font-size: 14px;
 	padding-left: 32px;
 	padding-right: 32px;
-	
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
@@ -57,11 +68,7 @@ body{
 	-ms-user-select: none;
 	user-select: none;
 }
-.search-button{
-	position: relative;
-	top: 6px;
-	left: 8px;
-}
+
 .button:hover {
 	transition-duration: 0.4s;
 	-moz-transition-duration: 0.4s;
@@ -78,10 +85,10 @@ body{
 	height: 50px;
 	width: 50px;
 	vertical-align: bottom;
-	padding-top:7px ;
 }
 
 .mglass {
+position: relative;
 	display: inline-block;
 	pointer-events: none;
 	-webkit-transform: rotate(-45deg);
@@ -94,9 +101,9 @@ body{
 	position: absolute;
 	font-size: 22px;
 	width: 100%;
+	
 	margin: 0;
 	padding: 0;
-	padding-top:3px ;
 }
 
 .search:focus + .searchbutton {
@@ -138,12 +145,11 @@ body{
 	padding: 0 0 0 16px;
 }
 
-// @media (max-width:821) {
-	
-// 	.navbar-logo{
-// 		color:blue;
-// 		font-size:large;
-// 		padding-top:8px  !important ;
-// 		font-family: 'Noto Sans', sans-serif;	
-// 	}
-//} 
+@media(max-width:821px){
+	.search-area{
+		position: absolute;
+		left:550px;
+		top:4px;
+		z-index: 10000;
+	}
+  }
