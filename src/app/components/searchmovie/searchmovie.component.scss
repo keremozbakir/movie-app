@@ -11,9 +11,15 @@
    height: 230px;
  }
  .movie-section{
-    position: relative;
+    position: absolute;
     left: 130px;
  }
  body{
     background-color: black !important;
+ }
+
+ @media(max-width:821px){
+   .movie-section{
+     left: 31px;
+   }
  }

@@ -15,6 +15,7 @@ import { SearchmovieComponent } from './components/searchmovie/searchmovie.compo
 import { SingleMovieComponent } from './components/single-movie/single-movie.component';
 import { ImdbPipePipe } from './pipes/imdb-pipe.pipe';
 import { DescSlicePipe } from './pipes/desc-slice.pipe';
+import { MovieDescScreenAdaptPipe } from './pipes/movie-desc-screen-adapt.pipe';
  
 
 @NgModule({
@@ -27,7 +28,8 @@ import { DescSlicePipe } from './pipes/desc-slice.pipe';
     SearchmovieComponent,
     SingleMovieComponent,
     ImdbPipePipe,
-    DescSlicePipe
+    DescSlicePipe,
+    MovieDescScreenAdaptPipe
   ],
   imports: [
     BrowserModule,

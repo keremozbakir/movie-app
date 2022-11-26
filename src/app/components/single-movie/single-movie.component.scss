@@ -29,7 +29,23 @@
     margin-top: 30px;
     max-width: 500px;
     font-family: 'Noto Sans', sans-serif;
+ 
     
+}.title{
+    position: relative;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    margin-left: 50px;
+    margin-top: 10px;
+    color: red;
+
+}
+.text-area{
+     
+    position: absolute;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    height:400px;
 }
 
 .right-texts{
@@ -72,21 +88,15 @@
 }
 
 
-.title{
-    position: relative;
-    color: white;
-    font-family: 'Noto Sans', sans-serif;
-    margin-left: 50px;
 
-}
 .gray-area{
-    height: 400px;
+    height: 450px;
     background-color: #181818;    
 }
 
 .main-image-button{
     position: relative;
-    bottom: 465px;
+    bottom: 510px;
     left: 50px;
     color: black;
     font-size: 1.5rem;
@@ -124,14 +134,14 @@
         position: absolute;
         color:white;
         z-index: 100000;
-        left: 290px;
+        left:55px;
         top:415px;
         
         
     }.imdb{
         position: relative;
         color:white;
-      
+        
         filter: blur(0.5px);
         font-size: small;
         z-index: 10000;
@@ -139,7 +149,8 @@
     .language{
         color:white;
         position: relative;
-        bottom: 18px;
+        bottom: 36px;
+        left: 80px;
         font-family: 'Noto Sans', sans-serif;
         filter: blur(0.5px);
         font-size: small;
@@ -165,9 +176,19 @@
         font-weight: 900;
         height: 40px;
         width: 110px;
+        bottom: 510px;
     
-    } 
- 
+    } .text-area{
+     
+        position: absolute;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        height: 750px;
+    }
+    .title{
+        font-size: 1.5rem;
+         
+    }
    
 
  }

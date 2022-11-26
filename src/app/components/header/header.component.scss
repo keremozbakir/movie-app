@@ -136,6 +136,8 @@ position: relative;
 	padding: 0 16px 0 0;
 }
 
+
+
 .expandright {
 	left: auto;
 	right: 49px; /* Button width-1px */
@@ -148,8 +150,8 @@ position: relative;
 @media(max-width:821px){
 	.search-area{
 		position: absolute;
-		left:550px;
-		top:4px;
+		left:620px;
+		top:6px;
 		z-index: 10000;
 	}
   }

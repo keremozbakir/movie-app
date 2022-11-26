@@ -4,15 +4,16 @@
     
     <div class="gray-area">
         <img class="netflix-data-image" src="../../../assets/images/netflix-data.jpeg" alt="Card image cap" >
-        <img class="netflix-today-image" src="../../../assets/images/no-6-netflix.jpg" alt="Card image cap" >      
-        <div class="text-area">
-            <h2 class="title">{{searchedMovie.original_title}}</h2>
-            <p class="movie-description">{{searchedMovie.overview | slice:0:600}}..</p>
-        </div>
+        <img class="netflix-today-image" src="../../../assets/images/no-6-netflix.jpg" alt="Card image cap" >   
         <div class="right-texts" id="right-texts">
             <p class="imdb">IMDB:  {{searchedMovie.vote_average | imdbPipe }} </p>
             <p class="language">Language: {{searchedMovie.original_language| uppercase}}</p>
+        </div>   
+        <div class="text-area">
+            <h2 class="title">{{searchedMovie.original_title}}</h2>
+            <p class="movie-description">{{searchedMovie.overview | movieDescScreenAdapt:screenWidth}}</p>
         </div>
+        
     </div>
     <button class="main-image-button"><img class="play-icon" src="{{playButtonIconUrl}}" >Play</button>
 </div>

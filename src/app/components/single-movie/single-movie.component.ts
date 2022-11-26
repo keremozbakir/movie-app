@@ -4,7 +4,7 @@ import { Movie } from 'src/app/Model/movie';
 import { DataService } from 'src/app/services/data.service';
 import { environment } from 'src/environments/environment';
 import { ImdbPipePipe } from 'src/app/pipes/imdb-pipe.pipe';
-
+import { MovieDescScreenAdaptPipe } from 'src/app/pipes/movie-desc-screen-adapt.pipe';
 
 @Component({
   selector: 'app-single-movie',
