@@ -7,10 +7,10 @@
         <img class="netflix-today-image" src="../../../assets/images/no-6-netflix.jpg" alt="Card image cap" >      
         <div class="text-area">
             <h2 class="title">{{searchedMovie.original_title}}</h2>
-            <p class="movie-description">{{searchedMovie.overview | slice:0:400}}..</p>
+            <p class="movie-description">{{searchedMovie.overview | slice:0:600}}..</p>
         </div>
-        <div class="right-texts">
-            <p class="imdb">IMDB:  {{searchedMovie.vote_average}} </p>
+        <div class="right-texts" id="right-texts">
+            <p class="imdb">IMDB:  {{searchedMovie.vote_average | imdbPipe }} </p>
             <p class="language">Language: {{searchedMovie.original_language| uppercase}}</p>
         </div>
     </div>

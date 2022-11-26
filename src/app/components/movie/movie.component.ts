@@ -8,7 +8,7 @@ import { Movie } from 'src/app/Model/movie';
 import { environment } from 'src/environments/environment';
 import { TransporterService } from 'src/app/services/transporter.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { DescSlicePipe } from 'src/app/pipes/desc-slice.pipe';
 
 @Component({
   selector: 'app-movie',

@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Movie } from 'src/app/Model/movie';
 import { DataService } from 'src/app/services/data.service';
 import { environment } from 'src/environments/environment';
+import { ImdbPipePipe } from 'src/app/pipes/imdb-pipe.pipe';
+
 
 @Component({
   selector: 'app-single-movie',
@@ -18,14 +20,17 @@ export class SingleMovieComponent implements OnInit {
   movieId!: any;
   searchedMovie!: any;
   movieOverview!: any;
-
+  // el: any;
+  // elPos: any;
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(params => {
       this.movieId = params.get('movieId')
     })
-    this.getMoviesById(this.movieId)
-     
+     this.getMoviesById(this.movieId)
+    // this.el= document.getElementById('right-texts')
+    // this.elPos = this.el.getBoundingClientRect()
+    // console.log(this.elPos)
   }
 
   getMoviesById(queryString:any) {
@@ -34,7 +39,7 @@ export class SingleMovieComponent implements OnInit {
      this.movieName = res.original_title
       this.imageUrl = "https://image.tmdb.org/t/p/original" + res.backdrop_path;
       this.movieOverview = res.overview
-      console.log(this.movieName,this.imageUrl,this.movieOverview)
+      //console.log(this.movieName,this.imageUrl,this.movieOverview)
     })
   }
 

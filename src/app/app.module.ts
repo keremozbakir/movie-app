@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchmovieComponent } from './components/searchmovie/searchmovie.component';
 import { SingleMovieComponent } from './components/single-movie/single-movie.component';
+import { ImdbPipePipe } from './pipes/imdb-pipe.pipe';
+import { DescSlicePipe } from './pipes/desc-slice.pipe';
  
 
 @NgModule({
@@ -23,7 +25,9 @@ import { SingleMovieComponent } from './components/single-movie/single-movie.com
     HeaderComponent,
     MovieComponent,
     SearchmovieComponent,
-    SingleMovieComponent
+    SingleMovieComponent,
+    ImdbPipePipe,
+    DescSlicePipe
   ],
   imports: [
     BrowserModule,

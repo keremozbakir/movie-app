@@ -1,12 +1,12 @@
  
   
- <div class="body  ">
+ <div class="body">
   
   <div class="main-image-area">
     <img src="{{nowPlaying.backdrop_path}}"  class="main-image" >
     <div class="main-movie-text-area">
-      <h2 class="main-image-title">{{nowPlaying.title}}</h2>
-      <p class="main-image-text">{{nowPlaying.overview}} </p>
+      <h2 class="main-image-title"  >{{nowPlaying.title}}</h2>
+      <p class="main-image-text">{{nowPlaying.overview | descSlice}} </p>
 
       <button class="main-image-button">Play</button>
       <!-- <button class="main-image-button">Watch Later</button> -->

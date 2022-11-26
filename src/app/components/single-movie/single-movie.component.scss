@@ -6,7 +6,7 @@
     height:750px;
     width: 700px;
     object-fit: cover;
-    background-color: lightblue;
+  
    
     //box-shadow: 0 0 0 99999px rgba(0, 0, 0, .5);
 
@@ -36,7 +36,7 @@
     position: absolute;
     height: 80px;
     width: 220px;
-    left: 450px;
+    left: 550px;
     bottom: 250px;
     z-index: 10000;
 }
@@ -86,8 +86,8 @@
 
 .main-image-button{
     position: relative;
-    bottom: 460px;
-    left: 20px;
+    bottom: 465px;
+    left: 50px;
     color: black;
     font-size: 1.5rem;
     font-weight: 900;
@@ -106,4 +106,45 @@
     position: relative;
     right: 18px;
     bottom: 3px;
+ }
+
+ @media(max-width:821px){
+
+    .movie-box{
+        position:absolute;
+        margin-top: 20px;
+        left:55px;
+        height:1250px;
+        width: 700px;
+        object-fit: cover;
+    }
+
+
+    .right-texts{
+        position: absolute;
+        color:white;
+        z-index: 100000;
+        left: 530px;
+        top:426px;
+        
+        
+    }
+    
+    // .imdb{
+    //     position: relative;
+    //     color:white;
+       
+    //     filter: blur(0.5px);
+    //     font-size: large;
+    //     z-index: 10000;
+    // }
+    // .language{
+    //     color:white;
+    //     position: relative;
+    //     font-family: 'Noto Sans', sans-serif;
+    //     filter: blur(0.5px);
+    //     z-index: 10000;
+    // }
+
+
  }
