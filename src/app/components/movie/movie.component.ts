@@ -36,7 +36,7 @@ export class MovieComponent implements OnInit {
     this.getUpcoming();
     this.getNowPlaying()
     this.randomNum = this.randomNumber(0, 19);
-    this.innerWidth = window.innerWidth;
+    this.innerWidth = window.screen.width
     this.innerWidthSet()
   }
   movieName: any;
@@ -48,11 +48,12 @@ export class MovieComponent implements OnInit {
   }
 
   innerWidthSet() {
-    if (this.innerWidth < 821 && this.innerWidth>375) {
-      console.log("Apple ipad air", this.innerWidth)
-      
-    } else if (this.innerWidth < 375) {
+ 
+    if (this.innerWidth < 376) {
       console.log("this is an iphone", this.innerWidth)
+    }else if ((821> this.innerWidth )  && (this.innerWidth>376)) {
+       console.log("Apple ipad air 2", this.innerWidth)
+       
     } else {
       console.log("this is a pc device !",this.innerWidth)
     }
@@ -156,7 +157,7 @@ customOptions: OwlOptions = {
       items:2
     },
     370: {
-      items: 2
+      items:3
     },
     740: {
       items: 3

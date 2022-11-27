@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DescSlicePipe implements PipeTransform {
 
   transform(value: any, innerWidth:number): unknown {
-    if (innerWidth <= 375) {
+    if (innerWidth <= 376) {
       return value.slice(0,100)+"..."
     }
 

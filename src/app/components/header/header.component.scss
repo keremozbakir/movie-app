@@ -43,7 +43,7 @@ body{
  
 .search-area{
 	position: absolute;
-	left: 1490px;
+	left: 1500px;
 	top:4px;
 	z-index: 10000;
 }
@@ -153,5 +153,27 @@ position: relative;
 		left:620px;
 		top:6px;
 		z-index: 10000;
+	}
+  }
+
+  @media(max-width:376px){
+	.search-area{
+		position: absolute;
+		left:200px;
+		top:6px;
+		z-index: 10000;
+	}.searchbutton {
+		position: absolute;
+		font-size: 22px;
+		width: 80%;
+		margin: 0;
+		padding: 0;
+	}.search:focus {
+		width: 189px; /* Bar width+1px */
+		padding: 0 16px 0 0;
+	}.navbar{
+    padding: 0;
+	height: 70px;
+ 
 	}
   }

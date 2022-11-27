@@ -33,6 +33,8 @@ export class SingleMovieComponent implements OnInit {
     } else {
       this.playButtonIconUrl="../../../assets/images/play-mid.png"
      }
+    
+    
   }
 
   getMoviesById(queryString:any) {

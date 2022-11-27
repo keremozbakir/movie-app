@@ -23,3 +23,22 @@
      left: 31px;
    }
  }
+
+ @media(max-width:376px){
+  .movie-section{
+    position: absolute;
+ 
+    padding: 0%;
+    right: 41px !important;
+   }
+  //.card{
+  //   margin:0;
+  //   width:100vw !important;
+ 
+  // }.single-image{
+  //   height: 230px;
+  //   width: 375px;
+  //   margin:0%;
+  //   padding:0%;
+  // }
+}

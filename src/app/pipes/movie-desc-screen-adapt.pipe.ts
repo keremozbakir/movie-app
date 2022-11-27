@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MovieDescScreenAdaptPipe implements PipeTransform {
 
   transform(value: string, innerWidth:number): any {
-    if (innerWidth < 821 && innerWidth>400) {
-      return value.slice(0,300)+"..."
+    if (innerWidth < 821 ) {
+      return value.slice(0,280)+"..."
     } else {
       return value
     }
